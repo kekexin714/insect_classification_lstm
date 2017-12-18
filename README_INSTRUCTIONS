@@ -1,0 +1,22 @@
+Requisite Packages:
+
+python3
+numpy
+keras
+sklearn
+
+Replicating results:
+
+LSTM:
+
+1. Obtain training data and convert to wav format with `sox`
+2. Perform any desired audio preprocessing using `sox`
+3. Run the featureExtraction.py script with the required command line arguments
+ - saves audio vectors to pickle files
+4. Run buildModelAndTest.py to perform the LSTM classification (uses fetchData.py)
+ - converts pickled audio data into numpy arrays representing the sequences of data
+5. Tune any hyperparameters in buildModelAndTest.py (in the arguments to fetchData())
+
+KNN, SVM:
+
+1. KNN - customize hyperparameters in kNN_SVM.py to run SVM or KNN on data
